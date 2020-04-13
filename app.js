@@ -51,6 +51,7 @@ app.get("/", (req, res) => {res.send("hello world")})
 app.use('/session', require('./routes/auth'))
 app.use('/inner-text', require('./routes/innerText'));
 app.use('/contact', require('./routes/contact'));
+app.use('/safetyAdvice', require('./routes/safetyAdvice'));
 
 
 module.exports = app;
