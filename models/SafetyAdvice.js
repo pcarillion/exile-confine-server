@@ -2,24 +2,25 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const safetyAdviceSchema = new Schema({
+    language: String,
     symptomsTitle: String,
-    symptom1: String,
-    symptom2: String,
-    symptom3: String,
-    symptom4: String,
-    symptom5: String,
+    symptomFever: String,
+    symptomCough: String,
+    symptomBreath: String,
+    symptomThroat: String,
+    symptomHeadache: String,
     preventionTitle: String,
-    prevention1: String,
-    prevention2: String,
-    prevention3: String,
-    prevention4: String,
-    prevention5: String,
+    preventionWash: String,
+    preventionContact: String,
+    preventionTouch: String,
+    preventionMask: String,
+    preventionCrowd: String,
     infectedTitle: String,
-    infected1: String,
-    infected2: String,
-    infected3: String,
-    infected4: String,
-    infected5: String
+    infectedHome: String,
+    infectedOthers: String,
+    infectedCover: String,
+    infectedTissue: String,
+    infectedClean: String
 });
 
 const safetyAdviceModel = mongoose.model("safetyAdvice", safetyAdviceSchema);
