@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const safetyAdviceSchema = new Schema({
-    language: String,
+    selLanguageId: String,
     symptomsTitle: String,
     symptomFever: String,
     symptomCough: String,

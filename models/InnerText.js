@@ -5,6 +5,7 @@ const innerTextSchema = new Schema({
     language: String,
     websiteName: String,
     websitePresentation: String,
+    advice: String,
     enter: String,
     timeSchedule: String,
     morning: String,

@@ -28,7 +28,7 @@ router.post('/create', function(req, res, next){
     console.log(req.body);
 
     const{
-        language,
+        selLanguageId,
         symptomsTitle,
         symptomFever,
         symptomCough,
@@ -40,17 +40,17 @@ router.post('/create', function(req, res, next){
         preventionContact,
         preventionTouch,
         preventionMask,
-        preventionCrown,
+        preventionCrowd,
         infectedTitle,
         infectedHome,
         infectedOthers,
         infectedCover,
-        infectedIssue,
+        infectedTissue,
         infectedClean
     } = req.body;
 
     const newSafetyAdvice = {
-        language,
+        selLanguageId,
         symptomsTitle,
         symptomFever,
         symptomCough,
@@ -62,12 +62,12 @@ router.post('/create', function(req, res, next){
         preventionContact,
         preventionTouch,
         preventionMask,
-        preventionCrown,
+        preventionCrowd,
         infectedTitle,
         infectedHome,
         infectedOthers,
         infectedCover,
-        infectedIssue,
+        infectedTissue,
         infectedClean
     }
 
@@ -78,7 +78,7 @@ router.post('/create', function(req, res, next){
             res.status(200).json({msg : "created", data: newSafetyAdvice})
         })
         .catch(err => {
-            console.log("creation failed", err);
+            // console.log("creation failed", err);
             next(err);
         });
 
