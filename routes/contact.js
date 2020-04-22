@@ -30,6 +30,7 @@ router.post('/create', function(req, res, next) {
     const {
         name,
         phone,
+        country,
         city,
         isWhatsApp,
         isTranslator,
@@ -39,7 +40,7 @@ router.post('/create', function(req, res, next) {
         needsSupermarket,
         needsElse,
         language,
-        otherLanguage,
+        otherLanguage, 
         from0to4,
         from4to8,
         from8to12,
@@ -51,6 +52,7 @@ router.post('/create', function(req, res, next) {
     const newContact  = {
         name,
         phone,
+        country,
         city,
         isWhatsApp,
         isTranslator,
