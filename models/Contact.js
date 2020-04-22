@@ -28,6 +28,7 @@ const contactSchema = new Schema({
     type: String,
     required: true
   },
+  otherLanguage: String,
   from0to4: Boolean,
   from4to8: Boolean,
   from8to12: Boolean,
