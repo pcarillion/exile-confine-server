@@ -71,6 +71,7 @@ router.post('/create', function(req, res, next){
         infectedClean
     }
 
+    
     SafetyAdviceModel
         .create(newSafetyAdvice)
         .then(dbRes => {
@@ -82,7 +83,21 @@ router.post('/create', function(req, res, next){
             next(err);
         });
 
-
+    
+        
+        
+    })
+            
+    router.patch('/edit/:id', function(req, res, next) {
+        console.log(req.body)
+        SafetyAdviceModel
+            .findByIdAndUpdate(req.params.id, req.body)
+            .then(dbRes => {
+                console.log(dbRes)
+                res.status(200).json({data:dbRes})
+            })
+            .catch(err => console.log(err))
+   
 })
 
 module.exports = router;
