@@ -46,7 +46,13 @@ router.post('/create', function(req, res, next){
         infectedOthers,
         infectedCover,
         infectedTissue,
-        infectedClean
+        infectedClean,
+        information1Title,
+        information1,
+        information2Title,
+        information2,
+        information3Title,
+        information3
     } = req.body;
 
     const newSafetyAdvice = {
@@ -68,7 +74,13 @@ router.post('/create', function(req, res, next){
         infectedOthers,
         infectedCover,
         infectedTissue,
-        infectedClean
+        infectedClean,
+        information1Title,
+        information1,
+        information2Title,
+        information2,
+        information3Title,
+        information3
     }
 
     
@@ -98,6 +110,17 @@ router.post('/create', function(req, res, next){
             })
             .catch(err => console.log(err))
    
-})
+    })
+
+    router.delete('/delete/:id', function(req, res, next){
+        console.log(req.params.id)
+        SafetyAdviceModel    
+            .findByIdAndDelete(req.params.id)
+            .then(dbRes => {
+                console.log(dbRes)
+                res.status(200).json({msg: "L'article a été supprimé"})
+            })
+            .catch(err => console.log(err))
+    })
 
 module.exports = router;
