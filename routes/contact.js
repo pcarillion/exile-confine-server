@@ -8,7 +8,7 @@ router.get('/all', function(req, res, next) {
     contactModel   
         .find()
         .then(dbRes => {
-            console.log(dbRes)
+            // console.log(dbRes)
             res.status(200).json(dbRes)
         })
         .catch(err => console.log(err))
@@ -26,6 +26,7 @@ router.get('/:id', function(req, res, next) {
 
 router.post('/create', function(req, res, next) {
 
+    console.log(req.body)
 
     const {
         name,
@@ -70,6 +71,8 @@ router.post('/create', function(req, res, next) {
         from16to20,
         from20to24
     }
+
+    console.log(newContact)
 
     contactModel
         .create(newContact)

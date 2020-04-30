@@ -34,6 +34,7 @@ router.post("/signup", (req, res, next) => {
       email,
       password: hashPass,
     };
+    
   
     userModel
       .create(newUser)
